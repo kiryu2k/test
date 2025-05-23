@@ -1,7 +1,10 @@
 package main
 
-import "fmt"
+import "go.uber.org/zap"
 
 func main() {
-	fmt.Println("hello world!! >.<")
+	logger, _ := zap.NewProduction()
+	defer logger.Sync()
+	sugar := logger.Sugar()
+	sugar.Info("hello world!! >.<")
 }

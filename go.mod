@@ -1,6 +1,6 @@
 module example
 
-go 1.24.1
+go 1.24
 
 require go.uber.org/zap v1.27.0
 
